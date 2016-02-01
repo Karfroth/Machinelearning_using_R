@@ -1,4 +1,4 @@
-# Predicting breast cancer using Random Forest
+# Predicting breast cancer using Xgboost
 Woosang Lee  
 Feb 1st, 2016  
 
@@ -63,59 +63,6 @@ Xgboost will be used to build model. To make model, you can use `train` function
 # xgboost train
 bst <- xgboost(data = dtrain, max.depth = 5,
                eta = 2, nthread = 2, nround = 50, objective = "binary:logistic")
-```
-
-```
-## [0]	train-error:0.017544
-## [1]	train-error:0.006579
-## [2]	train-error:0.002193
-## [3]	train-error:0.002193
-## [4]	train-error:0.000000
-## [5]	train-error:0.000000
-## [6]	train-error:0.000000
-## [7]	train-error:0.000000
-## [8]	train-error:0.000000
-## [9]	train-error:0.000000
-## [10]	train-error:0.000000
-## [11]	train-error:0.000000
-## [12]	train-error:0.000000
-## [13]	train-error:0.000000
-## [14]	train-error:0.000000
-## [15]	train-error:0.000000
-## [16]	train-error:0.000000
-## [17]	train-error:0.000000
-## [18]	train-error:0.000000
-## [19]	train-error:0.000000
-## [20]	train-error:0.000000
-## [21]	train-error:0.000000
-## [22]	train-error:0.000000
-## [23]	train-error:0.000000
-## [24]	train-error:0.000000
-## [25]	train-error:0.000000
-## [26]	train-error:0.000000
-## [27]	train-error:0.000000
-## [28]	train-error:0.000000
-## [29]	train-error:0.000000
-## [30]	train-error:0.000000
-## [31]	train-error:0.000000
-## [32]	train-error:0.000000
-## [33]	train-error:0.000000
-## [34]	train-error:0.000000
-## [35]	train-error:0.000000
-## [36]	train-error:0.000000
-## [37]	train-error:0.000000
-## [38]	train-error:0.000000
-## [39]	train-error:0.000000
-## [40]	train-error:0.000000
-## [41]	train-error:0.000000
-## [42]	train-error:0.000000
-## [43]	train-error:0.000000
-## [44]	train-error:0.000000
-## [45]	train-error:0.000000
-## [46]	train-error:0.000000
-## [47]	train-error:0.000000
-## [48]	train-error:0.000000
-## [49]	train-error:0.000000
 ```
 
 After build model, we can predict by using `predict` function. `confusionMatrix` function provide best information about result of model. We will see that information of better model at the last of this document.

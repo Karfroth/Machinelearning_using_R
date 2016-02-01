@@ -1,5 +1,5 @@
 ---
-title: "Predicting breast cancer using Random Forest"
+title: "Predicting breast cancer using Xgboost"
 author: "Woosang Lee"
 date: "Feb 1st, 2016"
 output: 
@@ -47,7 +47,7 @@ This data has **`r dataDim[2]` features** and **`r dataDim[1]` observations**. F
 
 Before make model, we need to seperate raw data into training and testing data. **createDataPartition** is useful for this process. Below code show allocating 80% of data to training set and 20% to testing set. After devide dataset, we need to make data matrix and label.
 
-```{r Seperate data, cache=TRUE}
+```{r Seperate data}
 # Seperate data into training set and test set
 set.seed(12323)
 inTrain<-createDataPartition(rawData$diagnosis, p=0.8, list=FALSE)
